@@ -1,7 +1,9 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="mydll.vcxproj" Id="08e94aff-97af-42e0-8288-eb7c9aa6185f" />
-</Solution>
+#include <Windows.h>
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
+	switch (ul_reason_for_call) {
+	case DLL_PROCESS_ATTACH:
+		MessageBox(NULL, L"I'm to notepad!", L"DLL injection", MB_OK);
+		break;
+	}
+	return TRUE;
+}
