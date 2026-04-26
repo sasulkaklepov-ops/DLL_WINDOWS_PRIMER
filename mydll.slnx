@@ -2,7 +2,7 @@
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
 	switch (ul_reason_for_call) {
 	case DLL_PROCESS_ATTACH:
-		MessageBox(NULL, L"I'm to notepad!", L"DLL injection", MB_OK);
+		MessageBox(NULL, L'I"m to notepad!', L'DLL injection', MB_OK);
 		break;
 	}
 	return TRUE;
